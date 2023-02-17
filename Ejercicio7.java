@@ -8,35 +8,34 @@ import java.util.Scanner;
 
 public class Ejercicio7 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int opcion;
-        System.out.println("1. El padrino");
-        System.out.println("2. Gladiador (2000)");
-        System.out.println("3. El Rey León (1994)");
-        System.out.println("4. Salir");
-        System.out.println("Elige una opción");
-        opcion = sc.nextInt();
-        while (opcion != 4) {
+        Scanner scanner = new Scanner(System.in);
+        int opcion = 0;
+        do {
+            System.out.println("Elige una opción");
+            System.out.println("1. La vida es bella");
+            System.out.println("2. El padrino");
+            System.out.println("3. El señor de los anillos");
+            System.out.println("4. Salir");
+            opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
-                    System.out.println("Just when I thought I was out, they pull me back in.");
+                    System.out.println("La vida es bella");
+                    System.out.println("No, señor, no. Yo no soy un héroe. Sólo soy un hombre común con unos ideales comunes. Y he hecho lo que he podido. Con lo poco que tenía. Con lo poco que sabía. Y, si he de morir, debo morir como un hombre que murió por sus ideales.");
                     break;
                 case 2:
-                    System.out.println("La muerte nos sonríe a todos, devolvámosle la sonrisa.");
+                    System.out.println("El padrino");
+                    System.out.println("No me preguntes cómo sé que eres un hombre honrado, pero sé que lo eres. Y sé que no vas a matarme. Porque si lo haces, no serás un hombre honrado.");
                     break;
                 case 3:
-                    System.out.println("Oh, sí... El pasado puede doler, pero tal como yo lo veo puedes huir de él o aprender.");
+                    System.out.println("El señor de los anillos");
+                    System.out.println("¡No es un adiós, es un hasta luego!");
+                    break;
+                case 4:
+                    System.out.println("Hasta luego");
                     break;
                 default:
                     System.out.println("Opción incorrecta");
             }
-            System.out.println("1. El padrino");
-            System.out.println("2. Gladiador (2000)");
-            System.out.println("3. El Rey León (1994)");
-            System.out.println("4. Salir");
-            System.out.println("Elige una opción");
-            opcion = sc.nextInt();
-        }
-        System.out.println("Hasta luego Lucas");
+        } while (opcion != 4);
     }
 }
